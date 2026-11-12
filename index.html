@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#427858"><meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><title>Time Card</title>
+</head>
+<body><main>
+  <header><span class="badge">ATTENDANCE</span><h1>Time Card</h1><p>Clock in and out for your shift.</p></header>
+  <section class="card" aria-label="Attendance clock">
+    <div class="today"><span id="todayDate">—</span><output id="clock">00:00:00</output></div>
+    <label for="name">Your name</label><select id="name" aria-label="Select your name"><option value="">Select your name</option><option value="Rozana">Rozana</option><option value="Wafa">Wafa</option></select>
+    <div class="current-status" id="currentStatus">Ready to clock in</div>
+    <div class="action-grid"><button class="clock-in" id="clockIn" type="button"><span>↓</span> Clock in</button><button class="clock-out" id="clockOut" type="button"><span>↑</span> Clock out</button></div>
+    <p class="message" id="message" role="status"></p>
+  </section>
+  <section class="records"><div class="records-title"><h2>Recent time cards</h2><button id="clear" class="link-button" type="button">Clear all</button></div><ul id="recordList"></ul></section>
+</main><script src="app.js"></script></body>
+</html>
